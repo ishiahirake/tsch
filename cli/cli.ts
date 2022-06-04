@@ -42,8 +42,8 @@ async function questions() {
  *
  * @param no
  */
-async function challenge(no?: string) {
-  const difficulty = program.opts().difficulty
+async function challenge(this: Command, no?: string) {
+  const difficulty = this.opts().difficulty
 
   const question = await findQuestion(no, difficulty)
   if (!question) {
