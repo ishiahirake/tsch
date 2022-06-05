@@ -8,6 +8,14 @@ import {
 } from "../fs"
 import { Blob, getBlob, getTree, TreeNode, TreeResponse } from "./octokit"
 
+const difficultyLevels: Record<string, number> = {
+  warm: 1,
+  easy: 2,
+  medium: 3,
+  hard: 4,
+  extreme: 5,
+}
+
 export class Question {
   readonly no: number
   readonly difficulty: string
@@ -41,6 +49,10 @@ export class Question {
 
   isDone(): boolean {
     return isSolutionExists(this.fullName)
+  }
+
+  getDifficultyLevel(): number {
+    return difficultyLevels[this.difficulty] ?? difficultyLevels["extreme"]
   }
 
   /**

@@ -16,6 +16,10 @@ program
   .description("challenge a question")
   .alias("do")
   .option("-d, --difficulty <difficulty>", "difficulty of question")
+  .option(
+    "-r, --random",
+    "challenge question randomly if supplied, otherwise challenge by difficulty order"
+  )
   .action(challenge)
 
 program.parse()
@@ -44,8 +48,9 @@ async function questions() {
  */
 async function challenge(this: Command, no?: string) {
   const difficulty = this.opts().difficulty
+  const random = this.opts().random
 
-  const question = await findQuestion(no, difficulty)
+  const question = await findQuestion({ no, difficulty, random })
   if (!question) {
     console.log("No question found.")
     return
@@ -60,16 +65,37 @@ async function challenge(this: Command, no?: string) {
   console.log(`Question ${question.fullName} is prepared.`)
 }
 
-async function findQuestion(no?: string, difficulty?: string) {
+type FindQuestionOptions = {
+  no?: string
+  difficulty?: string
+  random?: boolean
+}
+async function findQuestion(options?: FindQuestionOptions) {
+  const { no, difficulty, random } = options ?? {}
+
   const questions = await TypeChallengesRepo.getQuestions()
   if (no) {
     return questions.find((v) => v.no === Number(no))
   }
 
-  let filtered = questions
-  if (difficulty) {
-    filtered = questions.filter((v) => v.difficulty === difficulty)
+  let filtered = questions.filter((v) => !v.isDone())
+  if (filtered.length === 0) {
+    return undefined
   }
 
-  return filtered[Math.floor(Math.random() * filtered.length)]
+  if (difficulty) {
+    filtered = filtered.filter((v) => v.difficulty === difficulty)
+  }
+
+  if (random) {
+    return arrayRandom(filtered)
+  }
+
+  // Otherwise, find question by difficulty
+  filtered.sort((a, b) => a.getDifficultyLevel() - b.getDifficultyLevel())
+  return filtered?.[0]
+}
+
+function arrayRandom<T>(array: T[]): T | undefined {
+  return array.length > 0 ? array[Math.floor(Math.random() * array.length)] : undefined
 }
