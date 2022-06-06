@@ -16,5 +16,5 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                 | [Solution](./solutions/00043-easy-exclude.ts)         |
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                 | [Solution](./solutions/00189-easy-awaited.ts)         |
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                           | [Solution](./solutions/00268-easy-if.ts)              |
-|  533 | easy       | [Concat](./questions/0533-easy-concat/README.md)                    | [Solution](./solutions/00533-easy-concat.ts)          |
+|  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                   | [Solution](./solutions/00533-easy-concat.ts)          |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)               | [Solution](./solutions/00898-easy-includes.ts)        |
