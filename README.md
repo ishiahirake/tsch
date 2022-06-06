@@ -14,4 +14,5 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |   14 | easy       | [First](./questions/00014-easy-first/README.md)                     | [Solution](./solutions/00014-easy-first.ts)           |
 |   18 | easy       | [Tuple Length](./questions/00018-easy-tuple-length/README.md)       | [Solution](./solutions/00018-easy-tuple-length.ts)    |
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                 | [Solution](./solutions/00043-easy-exclude.ts)         |
+|  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                 | [Solution](./solutions/00189-easy-awaited.ts)         |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)               | [Solution](./solutions/00898-easy-includes.ts)        |
