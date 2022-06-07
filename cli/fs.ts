@@ -20,7 +20,7 @@ export function writeSolutionTemplate(question: string, template: string) {
   fs.writeFileSync(path, template)
 }
 
-export function getQuestionPath(question: string, file?: string): string {
+function getQuestionPath(question: string, file?: string): string {
   const paths = [workingDir, "questions", question]
   if (file) {
     paths.push(file)
@@ -28,18 +28,25 @@ export function getQuestionPath(question: string, file?: string): string {
   return paths.join(sep)
 }
 
-export function makeQuestionDir(question: string) {
+function ensureQuestionDir(question: string) {
   const path = getQuestionPath(question)
-  fs.mkdirSync(path, { recursive: true })
+  if (!isDir(path)) {
+    fs.mkdirSync(path, { recursive: true })
+  }
+}
+
+function ensureQuestionFilePath(question: string, file: string): string {
+  ensureQuestionDir(question)
+  return getQuestionPath(question, file)
 }
 
 export function writeReadmeFile(question: string, content: string, filename = "README.md") {
-  const path = getQuestionPath(question, filename)
+  const path = ensureQuestionFilePath(question, filename)
   fs.writeFileSync(path, content)
 }
 
 export function writeTestCasesFile(question: string, content: string, filename = "test-cases.ts") {
-  const path = getQuestionPath(question, filename)
+  const path = ensureQuestionFilePath(question, filename)
   fs.writeFileSync(path, content)
 }
 
@@ -48,6 +55,14 @@ export function writeTestCasesFile(question: string, content: string, filename =
 function isFileExists(file: string): boolean {
   try {
     return fs.statSync(file).isFile()
+  } catch (e) {
+    return false
+  }
+}
+
+function isDir(path: string): boolean {
+  try {
+    return fs.statSync(path).isDirectory()
   } catch (e) {
     return false
   }
