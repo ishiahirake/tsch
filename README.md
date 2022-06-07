@@ -20,3 +20,4 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)               | [Solution](./solutions/00898-easy-includes.ts)        |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                       | [Solution](./solutions/03057-easy-push.ts)            |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                 | [Solution](./solutions/03060-easy-unshift.ts)         |
+| 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)           | [Solution](./solutions/03312-easy-parameters.ts)      |
