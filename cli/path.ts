@@ -2,6 +2,10 @@ import { sep } from "path"
 
 const workingDir = process.cwd()
 
+export function getWorkingDirPath(file?: string): string {
+  return file ? [workingDir, file].join(sep) : workingDir
+}
+
 export function getSolutionPath(question?: string): string {
   let paths = [workingDir, "solutions"]
   if (question) {

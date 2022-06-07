@@ -3,5 +3,6 @@
         "tsch",
         "ucfirst",
         "Unshift"
-    ]
+    ],
+    "editor.tabSize": 2
 }

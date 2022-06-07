@@ -2,6 +2,7 @@ import { exec } from "child_process"
 import { isFile, write } from "./fs"
 import { decode, getBlob, getTree, TreeResponse } from "./octokit"
 import { getQuestionPath, getSolutionPath } from "./path"
+import { updateReadme } from "./readme"
 import { ucfirst } from "./utils"
 
 export type QuestionLiteral = {
@@ -68,28 +69,34 @@ export function isSolutionExists(fullName: string) {
  *
  * Do following:
  *
- * 1. create a file named `${this.fullName}.ts` in the `solutions` directory
+ * 1. create a git branch for the question
+ *
+ * 2. create a file named `${this.fullName}.ts` in the `solutions` directory
  *
  * (create a directory named `${this.fullName}` in the `questions` directory)
- * 2. download README.md to question directory
- * 3. download test-cases.ts to question directory
+ * 3. download README.md to question directory
+ * 4. download test-cases.ts to question directory
  *
- * 4. create a git branch for the question
+ * 5. update project README.md.
+ *
  */
 export async function prepare(question: Question) {
   const tree = await getTree(question.sha)
 
-  prepareTemplate(question, tree)
-  prepareReadme(question, tree)
-  prepareTestCases(question, tree)
-  prepareGitBranch(question, tree)
+  prepareQuestionGitBranch(question, tree)
+
+  prepareSolutionTemplate(question, tree)
+  prepareQuestionReadme(question, tree)
+  prepareQuestionTestCases(question, tree)
+
+  prepareProjectReadme(question, tree)
 }
 
 //
 
 type PrepareQuestion = (question: Question, tree: TreeResponse) => void
 
-const prepareTemplate: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareSolutionTemplate: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
   const node = tree.data.tree.find((v) => v.path === "template.ts")
   if (!node?.sha) {
     return
@@ -104,7 +111,7 @@ const prepareTemplate: PrepareQuestion = async (question: Question, tree: TreeRe
   }
 }
 
-const prepareReadme: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareQuestionReadme: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
   const node = tree.data.tree.find((v) => v.path === "README.md")
   if (!node?.sha) {
     return
@@ -119,7 +126,10 @@ const prepareReadme: PrepareQuestion = async (question: Question, tree: TreeResp
   }
 }
 
-const prepareTestCases: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareQuestionTestCases: PrepareQuestion = async (
+  question: Question,
+  tree: TreeResponse
+) => {
   const node = tree.data.tree.find((v) => v.path === "test-cases.ts")
   if (!node?.sha) {
     return
@@ -134,7 +144,10 @@ const prepareTestCases: PrepareQuestion = async (question: Question, tree: TreeR
   }
 }
 
-const prepareGitBranch: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareQuestionGitBranch: PrepareQuestion = async (
+  question: Question,
+  tree: TreeResponse
+) => {
   exec("git status -s", (error, stdout, stderr) => {
     if (error) {
       console.log("prepare git branch error: ", error)
@@ -151,4 +164,8 @@ const prepareGitBranch: PrepareQuestion = async (question: Question, tree: TreeR
       return
     }
   })
+}
+
+const prepareProjectReadme: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+  updateReadme()
 }
