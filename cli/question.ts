@@ -1,7 +1,16 @@
-import { exec } from "child_process"
-import { isSolutionExists, writeReadmeFile, writeSolutionTemplate, writeTestCasesFile } from "./fs"
+import { isFile, write } from "./fs"
+import { checkout, isGitRepo } from "./git"
 import { decode, getBlob, getTree, TreeResponse } from "./octokit"
+import { getQuestionPath, getSolutionPath, getWorkingDirPath } from "./path"
+import { updateReadme } from "./readme"
+import { doneQuestion } from "./store"
 import { ucfirst } from "./utils"
+
+export type QuestionLiteral = {
+  sha: string
+  fullName: string
+  done: boolean
+}
 
 const difficultyLevels: Record<string, number> = {
   warm: 1,
@@ -16,33 +25,44 @@ export class Question {
   readonly difficulty: string
   readonly name: string
 
-  constructor(public readonly fullName: string, public readonly sha: string) {
+  constructor(
+    public readonly fullName: string,
+    public readonly sha: string,
+    public readonly done: boolean
+  ) {
     const [no, difficulty, name] = this.parseFullName(fullName)
     this.no = no
     this.difficulty = difficulty
     this.name = name
   }
 
-  parseFullName(fullName: string): [number, string, string] {
-    const [no, difficulty, label] = fullName.split("-")
+  static fromLiteral(literal: QuestionLiteral) {
+    return new Question(literal.fullName, literal.sha, literal.done)
+  }
 
-    const name = label.split("-").map(ucfirst).join(" ")
+  parseFullName(fullName: string): [number, string, string] {
+    const [no, difficulty, ...labels] = fullName.split("-")
+
+    const name = labels.map(ucfirst).join(" ")
 
     return [Number(no), difficulty, name]
   }
 
   //
 
-  isDone = () => isDone(this)
   prepare = () => prepare(this)
 
   getDifficultyLevel(): number {
     return difficultyLevels[this.difficulty] ?? difficultyLevels["extreme"]
   }
+
+  toLiteral(): QuestionLiteral {
+    return { fullName: this.fullName, sha: this.sha, done: this.done }
+  }
 }
 
-export function isDone(question: Question) {
-  return isSolutionExists(question.fullName)
+export function isSolutionExists(fullName: string) {
+  return isFile(getSolutionPath(fullName))
 }
 
 /**
@@ -50,28 +70,36 @@ export function isDone(question: Question) {
  *
  * Do following:
  *
- * 1. create a file named `${this.fullName}.ts` in the `solutions` directory
+ * 1. create a git branch for the question
+ *
+ * 2. create a file named `${this.fullName}.ts` in the `solutions` directory
  *
  * (create a directory named `${this.fullName}` in the `questions` directory)
- * 2. download README.md to question directory
- * 3. download test-cases.ts to question directory
+ * 3. download README.md to question directory
+ * 4. download test-cases.ts to question directory
  *
- * 4. create a git branch for the question
+ * 5. update project README.md.
+ *
  */
 export async function prepare(question: Question) {
   const tree = await getTree(question.sha)
 
-  prepareTemplate(question, tree)
-  prepareReadme(question, tree)
-  prepareTestCases(question, tree)
-  prepareGitBranch(question, tree)
+  doneQuestion(question)
+
+  await prepareQuestionGitBranch(question, tree)
+
+  await prepareSolutionTemplate(question, tree)
+  await prepareQuestionReadme(question, tree)
+  await prepareQuestionTestCases(question, tree)
+
+  await prepareProjectReadme(question, tree)
 }
 
 //
 
-type PrepareQuestion = (question: Question, tree: TreeResponse) => void
+type PrepareQuestion = (question: Question, tree: TreeResponse) => Promise<void>
 
-const prepareTemplate: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareSolutionTemplate: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
   const node = tree.data.tree.find((v) => v.path === "template.ts")
   if (!node?.sha) {
     return
@@ -82,11 +110,11 @@ const prepareTemplate: PrepareQuestion = async (question: Question, tree: TreeRe
   if (!template.data) {
     console.log("No template found.")
   } else {
-    writeSolutionTemplate(question.fullName, decode(template.data))
+    write(getSolutionPath(question.fullName), decode(template.data))
   }
 }
 
-const prepareReadme: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareQuestionReadme: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
   const node = tree.data.tree.find((v) => v.path === "README.md")
   if (!node?.sha) {
     return
@@ -96,11 +124,15 @@ const prepareReadme: PrepareQuestion = async (question: Question, tree: TreeResp
   if (!readme.data) {
     console.log("No README.md found.")
   } else {
-    writeReadmeFile(question.fullName, decode(readme.data))
+    const file = getQuestionPath(question.fullName, "README.md")
+    write(file, decode(readme.data))
   }
 }
 
-const prepareTestCases: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareQuestionTestCases: PrepareQuestion = async (
+  question: Question,
+  tree: TreeResponse
+) => {
   const node = tree.data.tree.find((v) => v.path === "test-cases.ts")
   if (!node?.sha) {
     return
@@ -110,25 +142,26 @@ const prepareTestCases: PrepareQuestion = async (question: Question, tree: TreeR
   if (!testCases.data) {
     console.log("No test-cases.ts found.")
   } else {
-    writeTestCasesFile(question.fullName, decode(testCases.data))
+    const file = getQuestionPath(question.fullName, "test-cases.ts")
+    write(file, decode(testCases.data))
   }
 }
 
-const prepareGitBranch: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
-  exec("git status -s", (error, stdout, stderr) => {
-    if (error) {
-      console.log("prepare git branch error: ", error)
-      return
-    }
+const prepareQuestionGitBranch: PrepareQuestion = async (question: Question) => {
+  const cwd = getWorkingDirPath()
 
-    // git working tree is clean
-    if (stdout.trim().length === 0) {
-      exec(`git checkout -b feature/${question.fullName}`, (ce, cout, cee) => {
-        if (ce) {
-          console.error("checkout branch error, make sure working tree is clean", ce, cee)
-        }
-      })
-      return
-    }
-  })
+  const isGit = await isGitRepo(cwd)
+  if (!isGit) {
+    return
+  }
+
+  try {
+    await checkout(`feature/${question.fullName}`)
+  } catch (e) {
+    console.error("checkout branch error, make sure working tree is clean")
+  }
+}
+
+const prepareProjectReadme: PrepareQuestion = async () => {
+  updateReadme()
 }

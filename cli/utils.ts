@@ -1,3 +1,7 @@
+export function isEmpty(array: unknown[]): boolean {
+  return array.length === 0
+}
+
 export function arrayRandom<T>(array: T[]): T | undefined {
   return array.length > 0 ? array[Math.floor(Math.random() * array.length)] : undefined
 }

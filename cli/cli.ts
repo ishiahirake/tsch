@@ -55,7 +55,7 @@ async function challenge(this: Command, no?: string) {
     return
   }
 
-  if (question.isDone()) {
+  if (question.done) {
     console.log("Question is already done.")
     return
   }

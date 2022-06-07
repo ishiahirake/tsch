@@ -1,6 +1,10 @@
+import { isFile, read, write } from "./fs"
 import { getTree, TreeNode } from "./octokit"
-import { Question } from "./question"
-import { arrayRandom } from "./utils"
+import { getCachePath } from "./path"
+import { QuestionLiteral, Question, isSolutionExists } from "./question"
+import { arrayRandom, isEmpty } from "./utils"
+
+const QUESTION_CACHE_FILE = "questions.json"
 
 type FindQuestionOptions = {
   no?: string
@@ -11,12 +15,12 @@ type FindQuestionOptions = {
 export async function findQuestion(options?: FindQuestionOptions) {
   const { no, difficulty, random } = options ?? {}
 
-  const questions = await fetchQuestionsFromGithub()
+  const questions = await getQuestions()
   if (no) {
     return questions.find((v) => v.no === Number(no))
   }
 
-  let filtered = questions.filter((v) => !v.isDone())
+  let filtered = questions.filter((v) => !v.done)
   if (filtered.length === 0) {
     return undefined
   }
@@ -34,6 +38,19 @@ export async function findQuestion(options?: FindQuestionOptions) {
   return filtered?.[0]
 }
 
+export async function getQuestions() {
+  let questions = getQuestionsFromCache()
+
+  if (isEmpty(questions)) {
+    questions = await fetchQuestionsFromGithub()
+    if (!isEmpty(questions)) {
+      cacheQuestions(questions)
+    }
+  }
+
+  return questions
+}
+
 async function fetchQuestionsFromGithub(sha: string = "main") {
   const root = await getTree(sha)
 
@@ -47,9 +64,46 @@ async function fetchQuestionsFromGithub(sha: string = "main") {
   return tree.data.tree.map(fromTreeNode).filter((v) => v) as Question[]
 }
 
+function getQuestionsFromCache(): Question[] {
+  const file = getCachePath(QUESTION_CACHE_FILE)
+  if (!isFile(file)) {
+    return []
+  }
+
+  const content = read(file)
+  const data = JSON.parse(content) as QuestionLiteral[]
+
+  return data.map(Question.fromLiteral)
+}
+
+function cacheQuestions(questions: Question[]) {
+  const content = JSON.stringify(questions.map((q) => q.toLiteral()))
+  write(getCachePath(QUESTION_CACHE_FILE), content)
+}
+
 function fromTreeNode(node: TreeNode): Question | undefined {
   if (!node.path || !node.sha) {
     return undefined
   }
-  return new Question(node.path, node.sha)
+
+  return Question.fromLiteral({
+    sha: node.sha,
+    fullName: node.path,
+    done: isSolutionExists(node.path),
+  })
+}
+
+export function doneQuestion(question: Question) {
+  const questions = getQuestionsFromCache()
+  const index = questions.findIndex((q) => q.no === question.no)
+  if (index === -1) {
+    return
+  }
+
+  questions[index] = Question.fromLiteral({
+    ...question.toLiteral(),
+    done: true,
+  })
+
+  cacheQuestions(questions)
 }
