@@ -1,3 +1,4 @@
+import { exec } from "child_process"
 import { isSolutionExists, writeReadmeFile, writeSolutionTemplate, writeTestCasesFile } from "./fs"
 import { getBlob, getTree, GitBlob, TreeResponse } from "./octokit"
 import { ucfirst } from "./utils"
@@ -61,6 +62,7 @@ export async function prepare(question: Question) {
   prepareTemplate(question, tree)
   prepareReadme(question, tree)
   prepareTestCases(question, tree)
+  prepareGitBranch(question, tree)
 }
 
 //
@@ -108,6 +110,25 @@ const prepareTestCases: PrepareQuestion = async (question: Question, tree: TreeR
   } else {
     writeTestCasesFile(question.fullName, decode(testCases.data))
   }
+}
+
+const prepareGitBranch: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+  exec("git status -s", (error, stdout, stderr) => {
+    if (error) {
+      console.log("prepare git branch error: ", error)
+      return
+    }
+
+    // git working tree is clean
+    if (stdout.trim().length === 0) {
+      exec(`git checkout -b feature/${question.fullName}`, (ce, cout, cee) => {
+        if (ce) {
+          console.error("checkout branch error, make sure working tree is clean", ce, cee)
+        }
+      })
+      return
+    }
+  })
 }
 
 function decode(blob: GitBlob): string {
