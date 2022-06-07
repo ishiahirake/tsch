@@ -1,7 +1,7 @@
-import { exec } from "child_process"
 import { isFile, write } from "./fs"
+import { checkout, isGitRepo } from "./git"
 import { decode, getBlob, getTree, TreeResponse } from "./octokit"
-import { getQuestionPath, getSolutionPath } from "./path"
+import { getQuestionPath, getSolutionPath, getWorkingDirPath } from "./path"
 import { updateReadme } from "./readme"
 import { doneQuestion } from "./store"
 import { ucfirst } from "./utils"
@@ -86,18 +86,18 @@ export async function prepare(question: Question) {
 
   doneQuestion(question)
 
-  prepareQuestionGitBranch(question, tree)
+  await prepareQuestionGitBranch(question, tree)
 
-  prepareSolutionTemplate(question, tree)
-  prepareQuestionReadme(question, tree)
-  prepareQuestionTestCases(question, tree)
+  await prepareSolutionTemplate(question, tree)
+  await prepareQuestionReadme(question, tree)
+  await prepareQuestionTestCases(question, tree)
 
-  prepareProjectReadme(question, tree)
+  await prepareProjectReadme(question, tree)
 }
 
 //
 
-type PrepareQuestion = (question: Question, tree: TreeResponse) => void
+type PrepareQuestion = (question: Question, tree: TreeResponse) => Promise<void>
 
 const prepareSolutionTemplate: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
   const node = tree.data.tree.find((v) => v.path === "template.ts")
@@ -147,28 +147,21 @@ const prepareQuestionTestCases: PrepareQuestion = async (
   }
 }
 
-const prepareQuestionGitBranch: PrepareQuestion = async (
-  question: Question,
-  tree: TreeResponse
-) => {
-  exec("git status -s", (error, stdout, stderr) => {
-    if (error) {
-      console.log("prepare git branch error: ", error)
-      return
-    }
+const prepareQuestionGitBranch: PrepareQuestion = async (question: Question) => {
+  const cwd = getWorkingDirPath()
 
-    // git working tree is clean
-    if (stdout.trim().length === 0) {
-      exec(`git checkout -b feature/${question.fullName}`, (ce, cout, cee) => {
-        if (ce) {
-          console.error("checkout branch error, make sure working tree is clean", ce, cee)
-        }
-      })
-      return
-    }
-  })
+  const isGit = await isGitRepo(cwd)
+  if (!isGit) {
+    return
+  }
+
+  try {
+    await checkout(`feature/${question.fullName}`)
+  } catch (e) {
+    console.error("checkout branch error, make sure working tree is clean")
+  }
 }
 
-const prepareProjectReadme: PrepareQuestion = async (question: Question, tree: TreeResponse) => {
+const prepareProjectReadme: PrepareQuestion = async () => {
   updateReadme()
 }
