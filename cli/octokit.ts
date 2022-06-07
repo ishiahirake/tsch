@@ -19,7 +19,7 @@ export type TreeNode = {
   url?: string
 }
 
-export type Blob = BlobResponse["data"]
+export type GitBlob = BlobResponse["data"]
 
 //
 

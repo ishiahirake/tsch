@@ -1,5 +1,5 @@
 import { Command } from "commander"
-import { TypeChallengesRepo } from "./git/Repo"
+import { findQuestion } from "./store"
 
 const program = new Command()
 
@@ -30,11 +30,10 @@ program.parse()
  * List all questions.
  */
 async function questions() {
-  const questions = await TypeChallengesRepo.getQuestions()
-
-  for (const question of questions) {
-    console.log(question.fullName)
-  }
+  // const questions = await TypeChallengesRepo.getQuestions()
+  // for (const question of questions) {
+  //   console.log(question.fullName)
+  // }
 }
 
 /**
@@ -63,39 +62,4 @@ async function challenge(this: Command, no?: string) {
 
   await question.prepare()
   console.log(`Question ${question.fullName} is prepared.`)
-}
-
-type FindQuestionOptions = {
-  no?: string
-  difficulty?: string
-  random?: boolean
-}
-async function findQuestion(options?: FindQuestionOptions) {
-  const { no, difficulty, random } = options ?? {}
-
-  const questions = await TypeChallengesRepo.getQuestions()
-  if (no) {
-    return questions.find((v) => v.no === Number(no))
-  }
-
-  let filtered = questions.filter((v) => !v.isDone())
-  if (filtered.length === 0) {
-    return undefined
-  }
-
-  if (difficulty) {
-    filtered = filtered.filter((v) => v.difficulty === difficulty)
-  }
-
-  if (random) {
-    return arrayRandom(filtered)
-  }
-
-  // Otherwise, find question by difficulty
-  filtered.sort((a, b) => a.getDifficultyLevel() - b.getDifficultyLevel())
-  return filtered?.[0]
-}
-
-function arrayRandom<T>(array: T[]): T | undefined {
-  return array.length > 0 ? array[Math.floor(Math.random() * array.length)] : undefined
 }
