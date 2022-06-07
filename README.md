@@ -6,6 +6,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 |   NO | Difficulty | Challenge                                                           | Solution                                              |
 | ---: | ---------- | ------------------------------------------------------------------- | ----------------------------------------------------- |
+|    2 | medium     | [Return Type](./questions/00002-medium-return-type/README.md)       | [Solution](./solutions/00002-medium-return-type.ts)   |
 |    4 | easy       | [Pick](./questions/00004-easy-pick/README.md)                       | [Solution](./solutions/00004-easy-pick.ts)            |
 |    7 | easy       | [Readonly](./questions/00007-easy-readonly/README.md)               | [Solution](./solutions/00007-easy-readonly.ts)        |
 |    8 | medium     | [Readonly 2](./questions/00008-medium-readonly-2/README.md)         | [Solution](./solutions/00008-medium-readonly-2.ts)    |
