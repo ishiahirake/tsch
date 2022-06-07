@@ -92,3 +92,18 @@ function fromTreeNode(node: TreeNode): Question | undefined {
     done: isSolutionExists(node.path),
   })
 }
+
+export function doneQuestion(question: Question) {
+  const questions = getQuestionsFromCache()
+  const index = questions.findIndex((q) => q.no === question.no)
+  if (index === -1) {
+    return
+  }
+
+  questions[index] = Question.fromLiteral({
+    ...question.toLiteral(),
+    done: true,
+  })
+
+  cacheQuestions(questions)
+}

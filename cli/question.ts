@@ -3,6 +3,7 @@ import { isFile, write } from "./fs"
 import { decode, getBlob, getTree, TreeResponse } from "./octokit"
 import { getQuestionPath, getSolutionPath } from "./path"
 import { updateReadme } from "./readme"
+import { doneQuestion } from "./store"
 import { ucfirst } from "./utils"
 
 export type QuestionLiteral = {
@@ -82,6 +83,8 @@ export function isSolutionExists(fullName: string) {
  */
 export async function prepare(question: Question) {
   const tree = await getTree(question.sha)
+
+  doneQuestion(question)
 
   prepareQuestionGitBranch(question, tree)
 
