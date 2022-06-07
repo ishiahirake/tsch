@@ -21,6 +21,14 @@ export type TreeNode = {
 
 export type GitBlob = BlobResponse["data"]
 
+export function decode(blob: GitBlob): string {
+  if (blob.encoding === "base64") {
+    return Buffer.from(blob.content, "base64").toString()
+  }
+
+  throw new Error(`Unsupported encoding: ${blob.encoding}`)
+}
+
 //
 
 /**

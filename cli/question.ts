@@ -1,6 +1,6 @@
 import { exec } from "child_process"
 import { isSolutionExists, writeReadmeFile, writeSolutionTemplate, writeTestCasesFile } from "./fs"
-import { getBlob, getTree, GitBlob, TreeResponse } from "./octokit"
+import { decode, getBlob, getTree, TreeResponse } from "./octokit"
 import { ucfirst } from "./utils"
 
 const difficultyLevels: Record<string, number> = {
@@ -55,6 +55,8 @@ export function isDone(question: Question) {
  * (create a directory named `${this.fullName}` in the `questions` directory)
  * 2. download README.md to question directory
  * 3. download test-cases.ts to question directory
+ *
+ * 4. create a git branch for the question
  */
 export async function prepare(question: Question) {
   const tree = await getTree(question.sha)
@@ -129,12 +131,4 @@ const prepareGitBranch: PrepareQuestion = async (question: Question, tree: TreeR
       return
     }
   })
-}
-
-function decode(blob: GitBlob): string {
-  if (blob.encoding === "base64") {
-    return Buffer.from(blob.content, "base64").toString()
-  }
-
-  throw new Error(`Unsupported encoding: ${blob.encoding}`)
 }
