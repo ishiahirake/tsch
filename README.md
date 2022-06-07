@@ -11,6 +11,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |    4 | easy       | [Pick](./questions/00004-easy-pick/README.md)                       | [Solution](./solutions/00004-easy-pick.ts)            |
 |    7 | easy       | [Readonly](./questions/00007-easy-readonly/README.md)               | [Solution](./solutions/00007-easy-readonly.ts)        |
 |    8 | medium     | [Readonly 2](./questions/00008-medium-readonly-2/README.md)         | [Solution](./solutions/00008-medium-readonly-2.ts)    |
+|    9 | medium     | [Deep Readonly](./questions/00009-medium-deep-readonly/README.md)   | [Solution](./solutions/00009-medium-deep-readonly.ts) |
 |   11 | easy       | [Tuple to Object](./questions/00011-easy-tuple-to-object/README.md) | [Solution](./solutions/00011-easy-tuple-to-object.ts) |
 |   13 | warm       | [Hello World](./questions/00013-warm-hello-world/README.md)         | [Solution](./solutions/00013-warm-hello-world.ts)     |
 |   14 | easy       | [First](./questions/00014-easy-first/README.md)                     | [Solution](./solutions/00014-easy-first.ts)           |
