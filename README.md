@@ -17,6 +17,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |   12 | medium     | [Chainable Options](./questions/00012-medium-chainable-options/README.md) | [Solution](./solutions/00012-medium-chainable-options.ts) |
 |   13 | warm       | [Hello World](./questions/00013-warm-hello-world/README.md)               | [Solution](./solutions/00013-warm-hello-world.ts)         |
 |   14 | easy       | [First](./questions/00014-easy-first/README.md)                           | [Solution](./solutions/00014-easy-first.ts)               |
+|   15 | medium     | [Last](./questions/00015-medium-last/README.md)                           | [Solution](./solutions/00015-medium-last.ts)              |
 |   18 | easy       | [Tuple Length](./questions/00018-easy-tuple-length/README.md)             | [Solution](./solutions/00018-easy-tuple-length.ts)        |
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                       | [Solution](./solutions/00043-easy-exclude.ts)             |
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                       | [Solution](./solutions/00189-easy-awaited.ts)             |
