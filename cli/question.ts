@@ -12,7 +12,7 @@ export type QuestionLiteral = {
   done: boolean
 }
 
-const difficultyLevels: Record<string, number> = {
+export const difficultyLevels: Record<string, number> = {
   warm: 1,
   easy: 2,
   medium: 3,

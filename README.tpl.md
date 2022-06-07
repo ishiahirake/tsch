@@ -4,4 +4,6 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
+:statistic:
+
 :done-questions:
