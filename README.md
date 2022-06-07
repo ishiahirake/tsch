@@ -18,3 +18,4 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                           | [Solution](./solutions/00268-easy-if.ts)              |
 |  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                   | [Solution](./solutions/00533-easy-concat.ts)          |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)               | [Solution](./solutions/00898-easy-includes.ts)        |
+| 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                       | [Solution](./solutions/03057-easy-push.ts)            |
