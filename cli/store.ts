@@ -1,4 +1,4 @@
-import { read, write } from "./fs"
+import { isFile, read, write } from "./fs"
 import { getTree, TreeNode } from "./octokit"
 import { getCachePath } from "./path"
 import { QuestionLiteral, Question, isSolutionExists } from "./question"
@@ -65,8 +65,12 @@ async function fetchQuestionsFromGithub(sha: string = "main") {
 }
 
 function getQuestionsFromCache(): Question[] {
-  const content = read(getCachePath(QUESTION_CACHE_FILE))
+  const file = getCachePath(QUESTION_CACHE_FILE)
+  if (!isFile(file)) {
+    return []
+  }
 
+  const content = read(file)
   const data = JSON.parse(content) as QuestionLiteral[]
 
   return data.map(Question.fromLiteral)

@@ -31,9 +31,9 @@ export function getCachePath(file?: string): string {
 }
 
 export function getQuestionReadmeRelativePath(question: string): string {
-  return [".", "questions", question, "README.md"].join(sep)
+  return [".", "questions", question, "README.md"].join("/")
 }
 
 export function getQuestionSolutionRelativePath(question: string): string {
-  return [".", "solutions", `${question}.ts`].join(sep)
+  return [".", "solutions", `${question}.ts`].join("/")
 }

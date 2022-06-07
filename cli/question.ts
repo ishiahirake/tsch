@@ -40,9 +40,9 @@ export class Question {
   }
 
   parseFullName(fullName: string): [number, string, string] {
-    const [no, difficulty, label] = fullName.split("-")
+    const [no, difficulty, ...labels] = fullName.split("-")
 
-    const name = label.split("-").map(ucfirst).join(" ")
+    const name = labels.map(ucfirst).join(" ")
 
     return [Number(no), difficulty, name]
   }
