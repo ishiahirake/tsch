@@ -1,7 +1,14 @@
 import { exec } from "child_process"
-import { isSolutionExists, writeReadmeFile, writeSolutionTemplate, writeTestCasesFile } from "./fs"
+import { isFile, write } from "./fs"
 import { decode, getBlob, getTree, TreeResponse } from "./octokit"
+import { getQuestionPath, getSolutionPath } from "./path"
 import { ucfirst } from "./utils"
+
+export type QuestionLiteral = {
+  sha: string
+  fullName: string
+  done: boolean
+}
 
 const difficultyLevels: Record<string, number> = {
   warm: 1,
@@ -16,11 +23,19 @@ export class Question {
   readonly difficulty: string
   readonly name: string
 
-  constructor(public readonly fullName: string, public readonly sha: string) {
+  constructor(
+    public readonly fullName: string,
+    public readonly sha: string,
+    public readonly done: boolean
+  ) {
     const [no, difficulty, name] = this.parseFullName(fullName)
     this.no = no
     this.difficulty = difficulty
     this.name = name
+  }
+
+  static fromLiteral(literal: QuestionLiteral) {
+    return new Question(literal.fullName, literal.sha, literal.done)
   }
 
   parseFullName(fullName: string): [number, string, string] {
@@ -33,16 +48,19 @@ export class Question {
 
   //
 
-  isDone = () => isDone(this)
   prepare = () => prepare(this)
 
   getDifficultyLevel(): number {
     return difficultyLevels[this.difficulty] ?? difficultyLevels["extreme"]
   }
+
+  toLiteral(): QuestionLiteral {
+    return { fullName: this.fullName, sha: this.sha, done: this.done }
+  }
 }
 
-export function isDone(question: Question) {
-  return isSolutionExists(question.fullName)
+export function isSolutionExists(fullName: string) {
+  return isFile(getSolutionPath(fullName))
 }
 
 /**
@@ -82,7 +100,7 @@ const prepareTemplate: PrepareQuestion = async (question: Question, tree: TreeRe
   if (!template.data) {
     console.log("No template found.")
   } else {
-    writeSolutionTemplate(question.fullName, decode(template.data))
+    write(getSolutionPath(question.fullName), decode(template.data))
   }
 }
 
@@ -96,7 +114,8 @@ const prepareReadme: PrepareQuestion = async (question: Question, tree: TreeResp
   if (!readme.data) {
     console.log("No README.md found.")
   } else {
-    writeReadmeFile(question.fullName, decode(readme.data))
+    const file = getQuestionPath(question.fullName, "README.md")
+    write(file, decode(readme.data))
   }
 }
 
@@ -110,7 +129,8 @@ const prepareTestCases: PrepareQuestion = async (question: Question, tree: TreeR
   if (!testCases.data) {
     console.log("No test-cases.ts found.")
   } else {
-    writeTestCasesFile(question.fullName, decode(testCases.data))
+    const file = getQuestionPath(question.fullName, "test-cases.ts")
+    write(file, decode(testCases.data))
   }
 }
 
