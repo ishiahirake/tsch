@@ -4,8 +4,8 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-Total: 19% (25/133)  
-Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 16% (11/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
+Total: 20% (26/133)  
+Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 18% (12/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
 
 |   NO | Difficulty | Challenge                                                                 | Solution                                                  |
 | ---: | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -34,3 +34,4 @@ Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 16% (11/68) | Hard: 0% (0/37) | 
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                       | [Solution](./solutions/03060-easy-unshift.ts)             |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                 | [Solution](./solutions/03312-easy-parameters.ts)          |
+| 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)               | [Solution](./solutions/04803-medium-trim-right.ts)        |
