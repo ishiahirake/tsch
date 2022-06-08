@@ -4,8 +4,8 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-Total: 20% (26/133)  
-Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 18% (12/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
+Total: 20% (27/133)  
+Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 19% (13/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
 
 |   NO | Difficulty | Challenge                                                                 | Solution                                                  |
 | ---: | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -27,6 +27,7 @@ Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 18% (12/68) | Hard: 0% (0/37) | 
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                       | [Solution](./solutions/00043-easy-exclude.ts)             |
 |   62 | medium     | [Type Lookup](./questions/00062-medium-type-lookup/README.md)             | [Solution](./solutions/00062-medium-type-lookup.ts)       |
 |  106 | medium     | [Trimleft](./questions/00106-medium-trimleft/README.md)                   | [Solution](./solutions/00106-medium-trimleft.ts)          |
+|  108 | medium     | [Trim](./questions/00108-medium-trim/README.md)                           | [Solution](./solutions/00108-medium-trim.ts)              |
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                       | [Solution](./solutions/00189-easy-awaited.ts)             |
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                                 | [Solution](./solutions/00268-easy-if.ts)                  |
 |  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                         | [Solution](./solutions/00533-easy-concat.ts)              |
