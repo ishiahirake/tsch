@@ -4,8 +4,8 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-Total: 17% (22/133)  
-Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 12% (8/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
+Total: 17% (23/133)  
+Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 13% (9/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
 
 |   NO | Difficulty | Challenge                                                                 | Solution                                                  |
 | ---: | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -23,6 +23,7 @@ Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 12% (8/68) | Hard: 0% (0/37) | E
 |   15 | medium     | [Last](./questions/00015-medium-last/README.md)                           | [Solution](./solutions/00015-medium-last.ts)              |
 |   16 | medium     | [Pop](./questions/00016-medium-pop/README.md)                             | [Solution](./solutions/00016-medium-pop.ts)               |
 |   18 | easy       | [Tuple Length](./questions/00018-easy-tuple-length/README.md)             | [Solution](./solutions/00018-easy-tuple-length.ts)        |
+|   20 | medium     | [Promise All](./questions/00020-medium-promise-all/README.md)             | [Solution](./solutions/00020-medium-promise-all.ts)       |
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                       | [Solution](./solutions/00043-easy-exclude.ts)             |
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                       | [Solution](./solutions/00189-easy-awaited.ts)             |
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                                 | [Solution](./solutions/00268-easy-if.ts)                  |
