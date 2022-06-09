@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-28%25%20(37%2F133)-4265af" alt="28%" /><br>
+<img src="https://img.shields.io/badge/total-29%25%20(38%2F133)-4265af" alt="29%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-34%25%20(23%2F68)-d9901a" alt="34%" />
+<img src="https://img.shields.io/badge/medium-35%25%20(24%2F68)-d9901a" alt="35%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -45,6 +45,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  529 | medium     | [Absolute](./questions/00529-medium-absolute/README.md)                   | [Solution](./solutions/00529-medium-absolute.ts)          |
 |  531 | medium     | [String To Union](./questions/00531-medium-string-to-union/README.md)     | [Solution](./solutions/00531-medium-string-to-union.ts)   |
 |  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                         | [Solution](./solutions/00533-easy-concat.ts)              |
+|  599 | medium     | [Merge](./questions/00599-medium-merge/README.md)                         | [Solution](./solutions/00599-medium-merge.ts)             |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)                     | [Solution](./solutions/00898-easy-includes.ts)            |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                       | [Solution](./solutions/03060-easy-unshift.ts)             |
