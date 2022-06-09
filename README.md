@@ -4,8 +4,12 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-Total: 24% (32/133)  
-Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 26% (18/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
+<img src="https://img.shields.io/badge/total-24%25%20(32%2F133)-4265af" alt="24%" /><br>
+<img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
+<img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
+<img src="https://img.shields.io/badge/medium-26%25%20(18%2F68)-d9901a" alt="26%" />
+<img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
+<img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
 |   NO | Difficulty | Challenge                                                                 | Solution                                                  |
 | ---: | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------- |
