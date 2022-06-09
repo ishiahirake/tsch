@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-29%25%20(39%2F133)-4265af" alt="29%" /><br>
+<img src="https://img.shields.io/badge/total-30%25%20(40%2F133)-4265af" alt="30%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-37%25%20(25%2F68)-d9901a" alt="37%" />
+<img src="https://img.shields.io/badge/medium-38%25%20(26%2F68)-d9901a" alt="38%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -47,6 +47,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                         | [Solution](./solutions/00533-easy-concat.ts)              |
 |  599 | medium     | [Merge](./questions/00599-medium-merge/README.md)                         | [Solution](./solutions/00599-medium-merge.ts)             |
 |  612 | medium     | [Kebabcase](./questions/00612-medium-kebabcase/README.md)                 | [Solution](./solutions/00612-medium-kebabcase.ts)         |
+|  645 | medium     | [Diff](./questions/00645-medium-diff/README.md)                           | [Solution](./solutions/00645-medium-diff.ts)              |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)                     | [Solution](./solutions/00898-easy-includes.ts)            |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                       | [Solution](./solutions/03060-easy-unshift.ts)             |
