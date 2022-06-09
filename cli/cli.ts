@@ -1,4 +1,5 @@
 import { Command } from "commander"
+import { updateReadme } from "./md"
 import { findQuestion } from "./store"
 
 const program = new Command()
@@ -21,6 +22,8 @@ program
     "challenge question randomly if supplied, otherwise challenge by difficulty order"
   )
   .action(challenge)
+
+program.command("update-readme").description("update README.md file").action(updateReadme)
 
 program.parse()
 

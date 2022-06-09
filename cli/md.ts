@@ -43,27 +43,46 @@ export async function updateReadme() {
 function getStatisticInfo(questions: Question[]): string {
   const statistic = analyze(questions)
   const total =
-    getProgressInfo("Total", statistic.doneQuestionCount, statistic.totalQuestionCount) + "  "
+    getShieldsProgressInfo("total", statistic.doneQuestionCount, statistic.totalQuestionCount) +
+    "<br>"
   const difficulties = Object.keys(difficultyLevels).sort((l1, l2) => {
     return difficultyLevels[l1] - difficultyLevels[l2]
   })
 
   const detail = difficulties
     .map((difficulty) => {
-      return getProgressInfo(
+      return getShieldsProgressInfo(
         difficulty,
         statistic.doneDifficultyCountMap[difficulty],
         statistic.totalDifficultyCountMap[difficulty]
       )
     })
-    .join(" | ")
+    .join("\n")
 
   return [total, detail].join("\n")
 }
 
-function getProgressInfo(title: string, current: number, total: number): string {
+function getSimpleTextProgressInfo(title: string, current: number, total: number): string {
   const percentage = ((current / total) * 100).toFixed(0) + "%"
   return `${ucfirst(title)}: ${percentage} (${current}/${total})`
+}
+
+const titleColorMap = {
+  total: "4265af",
+  warm: "teal",
+  easy: "7aad0c",
+  medium: "d9901a",
+  hard: "de3d37",
+  extreme: "b11b8d",
+}
+function getShieldsProgressInfo(title: string, current: number, total: number): string {
+  const percentage = ((current / total) * 100).toFixed(0) + "%"
+  const info = `${percentage} (${current}/${total})`
+  const badge = [title, info, titleColorMap[title as keyof typeof titleColorMap]].join("-")
+
+  return `<img src="https://img.shields.io/badge/${encodeURIComponent(
+    badge
+  )}" alt="${percentage}" />`
 }
 
 //

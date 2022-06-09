@@ -2,7 +2,7 @@ import { isFile, write } from "./fs"
 import { checkout, isGitRepo } from "./git"
 import { decode, getBlob, getTree, TreeResponse } from "./octokit"
 import { getQuestionPath, getSolutionPath, getWorkingDirPath } from "./path"
-import { updateReadme } from "./readme"
+import { updateReadme } from "./md"
 import { doneQuestion } from "./store"
 import { ucfirst } from "./utils"
 
