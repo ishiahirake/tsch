@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-26%25%20(35%2F133)-4265af" alt="26%" /><br>
+<img src="https://img.shields.io/badge/total-27%25%20(36%2F133)-4265af" alt="27%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-31%25%20(21%2F68)-d9901a" alt="31%" />
+<img src="https://img.shields.io/badge/medium-32%25%20(22%2F68)-d9901a" alt="32%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -42,6 +42,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  298 | medium     | [Length Of String](./questions/00298-medium-length-of-string/README.md)   | [Solution](./solutions/00298-medium-length-of-string.ts)  |
 |  459 | medium     | [Flatten](./questions/00459-medium-flatten/README.md)                     | [Solution](./solutions/00459-medium-flatten.ts)           |
 |  527 | medium     | [Append To Object](./questions/00527-medium-append-to-object/README.md)   | [Solution](./solutions/00527-medium-append-to-object.ts)  |
+|  529 | medium     | [Absolute](./questions/00529-medium-absolute/README.md)                   | [Solution](./solutions/00529-medium-absolute.ts)          |
 |  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                         | [Solution](./solutions/00533-easy-concat.ts)              |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)                     | [Solution](./solutions/00898-easy-includes.ts)            |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
