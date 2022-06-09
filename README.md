@@ -4,8 +4,8 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-Total: 23% (31/133)  
-Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 25% (17/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
+Total: 24% (32/133)  
+Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 26% (18/68) | Hard: 0% (0/37) | Extreme: 0% (0/14)
 
 |   NO | Difficulty | Challenge                                                                 | Solution                                                  |
 | ---: | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -34,6 +34,7 @@ Warm: 100% (1/1) | Easy: 100% (13/13) | Medium: 25% (17/68) | Hard: 0% (0/37) | 
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                       | [Solution](./solutions/00189-easy-awaited.ts)             |
 |  191 | medium     | [Append Argument](./questions/00191-medium-append-argument/README.md)     | [Solution](./solutions/00191-medium-append-argument.ts)   |
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                                 | [Solution](./solutions/00268-easy-if.ts)                  |
+|  296 | medium     | [Permutation](./questions/00296-medium-permutation/README.md)             | [Solution](./solutions/00296-medium-permutation.ts)       |
 |  533 | easy       | [Concat](./questions/00533-easy-concat/README.md)                         | [Solution](./solutions/00533-easy-concat.ts)              |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)                     | [Solution](./solutions/00898-easy-includes.ts)            |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
