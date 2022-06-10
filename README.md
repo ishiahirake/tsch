@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-31%25%20(41%2F133)-4265af" alt="31%" /><br>
+<img src="https://img.shields.io/badge/total-32%25%20(42%2F133)-4265af" alt="32%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-40%25%20(27%2F68)-d9901a" alt="40%" />
+<img src="https://img.shields.io/badge/medium-41%25%20(28%2F68)-d9901a" alt="41%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -50,6 +50,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  645 | medium     | [Diff](./questions/00645-medium-diff/README.md)                           | [Solution](./solutions/00645-medium-diff.ts)              |
 |  898 | easy       | [Includes](./questions/00898-easy-includes/README.md)                     | [Solution](./solutions/00898-easy-includes.ts)            |
 |  949 | medium     | [Anyof](./questions/00949-medium-anyof/README.md)                         | [Solution](./solutions/00949-medium-anyof.ts)             |
+| 1042 | medium     | [Isnever](./questions/01042-medium-isnever/README.md)                     | [Solution](./solutions/01042-medium-isnever.ts)           |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                       | [Solution](./solutions/03060-easy-unshift.ts)             |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                 | [Solution](./solutions/03312-easy-parameters.ts)          |
