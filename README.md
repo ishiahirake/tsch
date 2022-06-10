@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-32%25%20(43%2F133)-4265af" alt="32%" /><br>
+<img src="https://img.shields.io/badge/total-33%25%20(44%2F133)-4265af" alt="33%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-43%25%20(29%2F68)-d9901a" alt="43%" />
+<img src="https://img.shields.io/badge/medium-44%25%20(30%2F68)-d9901a" alt="44%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -52,6 +52,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  949 | medium     | [Anyof](./questions/00949-medium-anyof/README.md)                         | [Solution](./solutions/00949-medium-anyof.ts)             |
 | 1042 | medium     | [Isnever](./questions/01042-medium-isnever/README.md)                     | [Solution](./solutions/01042-medium-isnever.ts)           |
 | 1097 | medium     | [Isunion](./questions/01097-medium-isunion/README.md)                     | [Solution](./solutions/01097-medium-isunion.ts)           |
+| 1130 | medium     | [Replacekeys](./questions/01130-medium-replacekeys/README.md)             | [Solution](./solutions/01130-medium-replacekeys.ts)       |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                             | [Solution](./solutions/03057-easy-push.ts)                |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                       | [Solution](./solutions/03060-easy-unshift.ts)             |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                 | [Solution](./solutions/03312-easy-parameters.ts)          |
