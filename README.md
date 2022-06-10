@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-38%25%20(51%2F133)-4265af" alt="38%" /><br>
+<img src="https://img.shields.io/badge/total-39%25%20(52%2F133)-4265af" alt="39%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-54%25%20(37%2F68)-d9901a" alt="54%" />
+<img src="https://img.shields.io/badge/medium-56%25%20(38%2F68)-d9901a" alt="56%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -60,6 +60,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 2595 | medium     | [Pickbytype](./questions/02595-medium-pickbytype/README.md)                         | [Solution](./solutions/02595-medium-pickbytype.ts)             |
 | 2688 | medium     | [Startswith](./questions/02688-medium-startswith/README.md)                         | [Solution](./solutions/02688-medium-startswith.ts)             |
 | 2693 | medium     | [Endswith](./questions/02693-medium-endswith/README.md)                             | [Solution](./solutions/02693-medium-endswith.ts)               |
+| 2757 | medium     | [Partialbykeys](./questions/02757-medium-partialbykeys/README.md)                   | [Solution](./solutions/02757-medium-partialbykeys.ts)          |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                                       | [Solution](./solutions/03057-easy-push.ts)                     |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                                 | [Solution](./solutions/03060-easy-unshift.ts)                  |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                           | [Solution](./solutions/03312-easy-parameters.ts)               |
