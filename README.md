@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-44%25%20(58%2F133)-4265af" alt="44%" /><br>
+<img src="https://img.shields.io/badge/total-44%25%20(59%2F133)-4265af" alt="44%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-65%25%20(44%2F68)-d9901a" alt="65%" />
+<img src="https://img.shields.io/badge/medium-66%25%20(45%2F68)-d9901a" alt="66%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -69,5 +69,6 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                                 | [Solution](./solutions/03060-easy-unshift.ts)                  |
 | 3062 | medium     | [Shift](./questions/03062-medium-shift/README.md)                                   | [Solution](./solutions/03062-medium-shift.ts)                  |
 | 3188 | medium     | [Tuple To Nested Object](./questions/03188-medium-tuple-to-nested-object/README.md) | [Solution](./solutions/03188-medium-tuple-to-nested-object.ts) |
+| 3192 | medium     | [Reverse](./questions/03192-medium-reverse/README.md)                               | [Solution](./solutions/03192-medium-reverse.ts)                |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                           | [Solution](./solutions/03312-easy-parameters.ts)               |
 | 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)                         | [Solution](./solutions/04803-medium-trim-right.ts)             |
