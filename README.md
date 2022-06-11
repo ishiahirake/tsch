@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-42%25%20(56%2F133)-4265af" alt="42%" /><br>
+<img src="https://img.shields.io/badge/total-43%25%20(57%2F133)-4265af" alt="43%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-62%25%20(42%2F68)-d9901a" alt="62%" />
+<img src="https://img.shields.io/badge/medium-63%25%20(43%2F68)-d9901a" alt="63%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -67,5 +67,6 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 2946 | medium     | [Objectentries](./questions/02946-medium-objectentries/README.md)                   | [Solution](./solutions/02946-medium-objectentries.ts)          |
 | 3057 | easy       | [Push](./questions/03057-easy-push/README.md)                                       | [Solution](./solutions/03057-easy-push.ts)                     |
 | 3060 | easy       | [Unshift](./questions/03060-easy-unshift/README.md)                                 | [Solution](./solutions/03060-easy-unshift.ts)                  |
+| 3062 | medium     | [Shift](./questions/03062-medium-shift/README.md)                                   | [Solution](./solutions/03062-medium-shift.ts)                  |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                           | [Solution](./solutions/03312-easy-parameters.ts)               |
 | 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)                         | [Solution](./solutions/04803-medium-trim-right.ts)             |
