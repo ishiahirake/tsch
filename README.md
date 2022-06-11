@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-46%25%20(61%2F133)-4265af" alt="46%" /><br>
+<img src="https://img.shields.io/badge/total-47%25%20(62%2F133)-4265af" alt="47%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-69%25%20(47%2F68)-d9901a" alt="69%" />
+<img src="https://img.shields.io/badge/medium-71%25%20(48%2F68)-d9901a" alt="71%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -73,4 +73,5 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 3196 | medium     | [Flip Arguments](./questions/03196-medium-flip-arguments/README.md)                 | [Solution](./solutions/03196-medium-flip-arguments.ts)         |
 | 3243 | medium     | [Flattendepth](./questions/03243-medium-flattendepth/README.md)                     | [Solution](./solutions/03243-medium-flattendepth.ts)           |
 | 3312 | easy       | [Parameters](./questions/03312-easy-parameters/README.md)                           | [Solution](./solutions/03312-easy-parameters.ts)               |
+| 3326 | medium     | [Bem Style String](./questions/03326-medium-bem-style-string/README.md)             | [Solution](./solutions/03326-medium-bem-style-string.ts)       |
 | 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)                         | [Solution](./solutions/04803-medium-trim-right.ts)             |
