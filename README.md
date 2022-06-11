@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-48%25%20(64%2F133)-4265af" alt="48%" /><br>
+<img src="https://img.shields.io/badge/total-49%25%20(65%2F133)-4265af" alt="49%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-74%25%20(50%2F68)-d9901a" alt="74%" />
+<img src="https://img.shields.io/badge/medium-75%25%20(51%2F68)-d9901a" alt="75%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -76,4 +76,5 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 3326 | medium     | [Bem Style String](./questions/03326-medium-bem-style-string/README.md)             | [Solution](./solutions/03326-medium-bem-style-string.ts)       |
 | 3376 | medium     | [Inordertraversal](./questions/03376-medium-inordertraversal/README.md)             | [Solution](./solutions/03376-medium-inordertraversal.ts)       |
 | 4179 | medium     | [Flip](./questions/04179-medium-flip/README.md)                                     | [Solution](./solutions/04179-medium-flip.ts)                   |
+| 4182 | medium     | [Fibonacci Sequence](./questions/04182-medium-fibonacci-sequence/README.md)         | [Solution](./solutions/04182-medium-fibonacci-sequence.ts)     |
 | 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)                         | [Solution](./solutions/04803-medium-trim-right.ts)             |
