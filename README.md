@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-54%25%20(72%2F133)-4265af" alt="54%" /><br>
+<img src="https://img.shields.io/badge/total-55%25%20(73%2F133)-4265af" alt="55%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-85%25%20(58%2F68)-d9901a" alt="85%" />
+<img src="https://img.shields.io/badge/medium-87%25%20(59%2F68)-d9901a" alt="87%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -85,3 +85,4 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 4518 | medium     | [Fill](./questions/04518-medium-fill/README.md)                                     | [Solution](./solutions/04518-medium-fill.ts)                   |
 | 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)                         | [Solution](./solutions/04803-medium-trim-right.ts)             |
 | 5117 | medium     | [Without](./questions/05117-medium-without/README.md)                               | [Solution](./solutions/05117-medium-without.ts)                |
+| 5140 | medium     | [Trunc](./questions/05140-medium-trunc/README.md)                                   | [Solution](./solutions/05140-medium-trunc.ts)                  |
