@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-51%25%20(68%2F133)-4265af" alt="51%" /><br>
+<img src="https://img.shields.io/badge/total-52%25%20(69%2F133)-4265af" alt="52%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-79%25%20(54%2F68)-d9901a" alt="79%" />
+<img src="https://img.shields.io/badge/medium-81%25%20(55%2F68)-d9901a" alt="81%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -80,4 +80,5 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 4260 | medium     | [Nomiwase](./questions/04260-medium-nomiwase/README.md)                             | [Solution](./solutions/04260-medium-nomiwase.ts)               |
 | 4425 | medium     | [Greater Than](./questions/04425-medium-greater-than/README.md)                     | [Solution](./solutions/04425-medium-greater-than.ts)           |
 | 4471 | medium     | [Zip](./questions/04471-medium-zip/README.md)                                       | [Solution](./solutions/04471-medium-zip.ts)                    |
+| 4484 | medium     | [Istuple](./questions/04484-medium-istuple/README.md)                               | [Solution](./solutions/04484-medium-istuple.ts)                |
 | 4803 | medium     | [Trim Right](./questions/04803-medium-trim-right/README.md)                         | [Solution](./solutions/04803-medium-trim-right.ts)             |
