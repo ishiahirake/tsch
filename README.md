@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-58%25%20(77%2F133)-4265af" alt="58%" /><br>
+<img src="https://img.shields.io/badge/total-59%25%20(78%2F133)-4265af" alt="59%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-93%25%20(63%2F68)-d9901a" alt="93%" />
+<img src="https://img.shields.io/badge/medium-94%25%20(64%2F68)-d9901a" alt="94%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
 
@@ -90,3 +90,4 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 5310 | medium     | [Join](./questions/05310-medium-join/README.md)                                     | [Solution](./solutions/05310-medium-join.ts)                   |
 | 5317 | medium     | [Lastindexof](./questions/05317-medium-lastindexof/README.md)                       | [Solution](./solutions/05317-medium-lastindexof.ts)            |
 | 5360 | medium     | [Unique](./questions/05360-medium-unique/README.md)                                 | [Solution](./solutions/05360-medium-unique.ts)                 |
+| 5821 | medium     | [Maptypes](./questions/05821-medium-maptypes/README.md)                             | [Solution](./solutions/05821-medium-maptypes.ts)               |
