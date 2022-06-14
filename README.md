@@ -4,12 +4,12 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-59%25%20(78%2F133)-4265af" alt="59%" /><br>
+<img src="https://img.shields.io/badge/total-59%25%20(79%2F133)-4265af" alt="59%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
 <img src="https://img.shields.io/badge/medium-94%25%20(64%2F68)-d9901a" alt="94%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
-<img src="https://img.shields.io/badge/extreme-0%25%20(0%2F14)-b11b8d" alt="0%" />
+<img src="https://img.shields.io/badge/extreme-7%25%20(1%2F14)-b11b8d" alt="7%" />
 
 |   NO | Difficulty | Challenge                                                                           | Solution                                                       |
 | ---: | ---------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -37,6 +37,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  119 | medium     | [Replaceall](./questions/00119-medium-replaceall/README.md)                         | [Solution](./solutions/00119-medium-replaceall.ts)             |
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                                 | [Solution](./solutions/00189-easy-awaited.ts)                  |
 |  191 | medium     | [Append Argument](./questions/00191-medium-append-argument/README.md)               | [Solution](./solutions/00191-medium-append-argument.ts)        |
+|  216 | extreme    | [Slice](./questions/00216-extreme-slice/README.md)                                  | [Solution](./solutions/00216-extreme-slice.ts)                 |
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                                           | [Solution](./solutions/00268-easy-if.ts)                       |
 |  296 | medium     | [Permutation](./questions/00296-medium-permutation/README.md)                       | [Solution](./solutions/00296-medium-permutation.ts)            |
 |  298 | medium     | [Length Of String](./questions/00298-medium-length-of-string/README.md)             | [Solution](./solutions/00298-medium-length-of-string.ts)       |
