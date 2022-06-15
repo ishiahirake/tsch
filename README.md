@@ -4,10 +4,10 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-62%25%20(82%2F133)-4265af" alt="62%" /><br>
+<img src="https://img.shields.io/badge/total-62%25%20(83%2F133)-4265af" alt="62%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
-<img src="https://img.shields.io/badge/medium-99%25%20(67%2F68)-d9901a" alt="99%" />
+<img src="https://img.shields.io/badge/medium-100%25%20(68%2F68)-d9901a" alt="100%" />
 <img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
 <img src="https://img.shields.io/badge/extreme-7%25%20(1%2F14)-b11b8d" alt="7%" />
 
@@ -95,3 +95,4 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 | 7544 | medium     | [Construct Tuple](./questions/07544-medium-construct-tuple/README.md)               | [Solution](./solutions/07544-medium-construct-tuple.ts)        |
 | 8640 | medium     | [Number Range](./questions/08640-medium-number-range/README.md)                     | [Solution](./solutions/08640-medium-number-range.ts)           |
 | 8767 | medium     | [Combination](./questions/08767-medium-combination/README.md)                       | [Solution](./solutions/08767-medium-combination.ts)            |
+| 8987 | medium     | [Subsequence](./questions/08987-medium-subsequence/README.md)                       | [Solution](./solutions/08987-medium-subsequence.ts)            |
