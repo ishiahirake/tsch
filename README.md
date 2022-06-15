@@ -4,11 +4,11 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-62%25%20(83%2F133)-4265af" alt="62%" /><br>
+<img src="https://img.shields.io/badge/total-63%25%20(84%2F133)-4265af" alt="63%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
 <img src="https://img.shields.io/badge/medium-100%25%20(68%2F68)-d9901a" alt="100%" />
-<img src="https://img.shields.io/badge/hard-0%25%20(0%2F37)-de3d37" alt="0%" />
+<img src="https://img.shields.io/badge/hard-3%25%20(1%2F37)-de3d37" alt="3%" />
 <img src="https://img.shields.io/badge/extreme-7%25%20(1%2F14)-b11b8d" alt="7%" />
 
 |   NO | Difficulty | Challenge                                                                           | Solution                                                       |
@@ -16,6 +16,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |    2 | medium     | [Return Type](./questions/00002-medium-return-type/README.md)                       | [Solution](./solutions/00002-medium-return-type.ts)            |
 |    3 | medium     | [Omit](./questions/00003-medium-omit/README.md)                                     | [Solution](./solutions/00003-medium-omit.ts)                   |
 |    4 | easy       | [Pick](./questions/00004-easy-pick/README.md)                                       | [Solution](./solutions/00004-easy-pick.ts)                     |
+|    6 | hard       | [Simple Vue](./questions/00006-hard-simple-vue/README.md)                           | [Solution](./solutions/00006-hard-simple-vue.ts)               |
 |    7 | easy       | [Readonly](./questions/00007-easy-readonly/README.md)                               | [Solution](./solutions/00007-easy-readonly.ts)                 |
 |    8 | medium     | [Readonly 2](./questions/00008-medium-readonly-2/README.md)                         | [Solution](./solutions/00008-medium-readonly-2.ts)             |
 |    9 | medium     | [Deep Readonly](./questions/00009-medium-deep-readonly/README.md)                   | [Solution](./solutions/00009-medium-deep-readonly.ts)          |
