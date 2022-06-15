@@ -4,11 +4,11 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-63%25%20(84%2F133)-4265af" alt="63%" /><br>
+<img src="https://img.shields.io/badge/total-64%25%20(85%2F133)-4265af" alt="64%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
 <img src="https://img.shields.io/badge/medium-100%25%20(68%2F68)-d9901a" alt="100%" />
-<img src="https://img.shields.io/badge/hard-3%25%20(1%2F37)-de3d37" alt="3%" />
+<img src="https://img.shields.io/badge/hard-5%25%20(2%2F37)-de3d37" alt="5%" />
 <img src="https://img.shields.io/badge/extreme-7%25%20(1%2F14)-b11b8d" alt="7%" />
 
 |   NO | Difficulty | Challenge                                                                           | Solution                                                       |
@@ -27,6 +27,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |   14 | easy       | [First](./questions/00014-easy-first/README.md)                                     | [Solution](./solutions/00014-easy-first.ts)                    |
 |   15 | medium     | [Last](./questions/00015-medium-last/README.md)                                     | [Solution](./solutions/00015-medium-last.ts)                   |
 |   16 | medium     | [Pop](./questions/00016-medium-pop/README.md)                                       | [Solution](./solutions/00016-medium-pop.ts)                    |
+|   17 | hard       | [Currying 1](./questions/00017-hard-currying-1/README.md)                           | [Solution](./solutions/00017-hard-currying-1.ts)               |
 |   18 | easy       | [Tuple Length](./questions/00018-easy-tuple-length/README.md)                       | [Solution](./solutions/00018-easy-tuple-length.ts)             |
 |   20 | medium     | [Promise All](./questions/00020-medium-promise-all/README.md)                       | [Solution](./solutions/00020-medium-promise-all.ts)            |
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                                 | [Solution](./solutions/00043-easy-exclude.ts)                  |
