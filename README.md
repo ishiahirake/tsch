@@ -4,11 +4,11 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-64%25%20(85%2F133)-4265af" alt="64%" /><br>
+<img src="https://img.shields.io/badge/total-65%25%20(86%2F133)-4265af" alt="65%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
 <img src="https://img.shields.io/badge/medium-100%25%20(68%2F68)-d9901a" alt="100%" />
-<img src="https://img.shields.io/badge/hard-5%25%20(2%2F37)-de3d37" alt="5%" />
+<img src="https://img.shields.io/badge/hard-8%25%20(3%2F37)-de3d37" alt="8%" />
 <img src="https://img.shields.io/badge/extreme-7%25%20(1%2F14)-b11b8d" alt="7%" />
 
 |   NO | Difficulty | Challenge                                                                           | Solution                                                       |
@@ -31,6 +31,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |   18 | easy       | [Tuple Length](./questions/00018-easy-tuple-length/README.md)                       | [Solution](./solutions/00018-easy-tuple-length.ts)             |
 |   20 | medium     | [Promise All](./questions/00020-medium-promise-all/README.md)                       | [Solution](./solutions/00020-medium-promise-all.ts)            |
 |   43 | easy       | [Exclude](./questions/00043-easy-exclude/README.md)                                 | [Solution](./solutions/00043-easy-exclude.ts)                  |
+|   55 | hard       | [Union To Intersection](./questions/00055-hard-union-to-intersection/README.md)     | [Solution](./solutions/00055-hard-union-to-intersection.ts)    |
 |   62 | medium     | [Type Lookup](./questions/00062-medium-type-lookup/README.md)                       | [Solution](./solutions/00062-medium-type-lookup.ts)            |
 |  106 | medium     | [Trimleft](./questions/00106-medium-trimleft/README.md)                             | [Solution](./solutions/00106-medium-trimleft.ts)               |
 |  108 | medium     | [Trim](./questions/00108-medium-trim/README.md)                                     | [Solution](./solutions/00108-medium-trim.ts)                   |
