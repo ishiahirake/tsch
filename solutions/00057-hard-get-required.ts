@@ -3,7 +3,7 @@
  */
 
 type GetRequired<T> = {
-  [P in keyof T as IsOptional<T, P> extends true ? P : never]: T[P]
+  [P in keyof T as IsRequired<T, P> extends true ? P : never]: T[P]
 }
 
-type IsOptional<T, K extends keyof T, V = Pick<T, K>> = V extends Required<V> ? true : false
+type IsRequired<T, K extends keyof T, V = Pick<T, K>> = V extends Required<V> ? true : false
