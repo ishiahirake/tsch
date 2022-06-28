@@ -4,11 +4,11 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 
 ## Challenges
 
-<img src="https://img.shields.io/badge/total-70%25%20(93%2F133)-4265af" alt="70%" /><br>
+<img src="https://img.shields.io/badge/total-71%25%20(94%2F133)-4265af" alt="71%" /><br>
 <img src="https://img.shields.io/badge/warm-100%25%20(1%2F1)-teal" alt="100%" />
 <img src="https://img.shields.io/badge/easy-100%25%20(13%2F13)-7aad0c" alt="100%" />
 <img src="https://img.shields.io/badge/medium-100%25%20(68%2F68)-d9901a" alt="100%" />
-<img src="https://img.shields.io/badge/hard-27%25%20(10%2F37)-de3d37" alt="27%" />
+<img src="https://img.shields.io/badge/hard-30%25%20(11%2F37)-de3d37" alt="30%" />
 <img src="https://img.shields.io/badge/extreme-7%25%20(1%2F14)-b11b8d" alt="7%" />
 
 |   NO | Difficulty | Challenge                                                                           | Solution                                                       |
@@ -47,6 +47,7 @@ My answers for [type-challenges](https://github.com/type-challenges/type-challen
 |  147 | hard       | [C Printf Parser](./questions/00147-hard-c-printf-parser/README.md)                 | [Solution](./solutions/00147-hard-c-printf-parser.ts)          |
 |  189 | easy       | [Awaited](./questions/00189-easy-awaited/README.md)                                 | [Solution](./solutions/00189-easy-awaited.ts)                  |
 |  191 | medium     | [Append Argument](./questions/00191-medium-append-argument/README.md)               | [Solution](./solutions/00191-medium-append-argument.ts)        |
+|  213 | hard       | [Vue Basic Props](./questions/00213-hard-vue-basic-props/README.md)                 | [Solution](./solutions/00213-hard-vue-basic-props.ts)          |
 |  216 | extreme    | [Slice](./questions/00216-extreme-slice/README.md)                                  | [Solution](./solutions/00216-extreme-slice.ts)                 |
 |  268 | easy       | [If](./questions/00268-easy-if/README.md)                                           | [Solution](./solutions/00268-easy-if.ts)                       |
 |  296 | medium     | [Permutation](./questions/00296-medium-permutation/README.md)                       | [Solution](./solutions/00296-medium-permutation.ts)            |
